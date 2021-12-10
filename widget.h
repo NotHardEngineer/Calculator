@@ -24,6 +24,14 @@ private slots:
     void on_radioButton_cos_toggled(bool checked);
     void on_radioButton_arcsin_toggled(bool checked);
     void on_radioButton_arccos_toggled(bool checked);
+    void on_radioButton_plus_clicked();
+
+    void on_radioButton_minus_clicked();
+
+    void on_radioButton_multiply_clicked();
+
+    void on_radioButton_divine_clicked();
+
 private:
     Ui::Widget *ui;
 };

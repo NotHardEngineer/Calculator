@@ -115,21 +115,13 @@ void Widget::on_Button_Result_clicked()
 
         if (ok1 and ok2){
             if (ui->radioButton_plus->isChecked()){
-                ui->label_1stElement->setText("Первое слагаемое");
-                ui->label_2ndElement->setText("Второе слагаемое");
-                ui->label_result->setText("Сумма");
+
                 Result_print(element_1 + element_2);
             }
             if (ui->radioButton_minus->isChecked()){
-                ui->label_1stElement->setText("Уменьшаемое");
-                ui->label_2ndElement->setText("Вычитаемое");
-                ui->label_result->setText("Разность");
                 Result_print(element_1 - element_2);
             }
             if (ui->radioButton_multiply->isChecked()){
-                ui->label_1stElement->setText("Первый множитель");
-                ui->label_2ndElement->setText("Второй множитель");
-                ui->label_result->setText("Произведение");
                 Result_print(element_1 * element_2);
             }
             if (ui->radioButton_divine->isChecked()){
@@ -139,9 +131,6 @@ void Widget::on_Button_Result_clicked()
                     ui->lineEdit_result->clear();
                 }
                 else{
-                    ui->label_1stElement->setText("Делимое");
-                    ui->label_2ndElement->setText("Делитель");
-                    ui->label_result->setText("Частное");
                     Result_print(element_1/element_2);
                 }
             }
@@ -164,7 +153,7 @@ void Widget::on_radioButton_sqrt_toggled(bool checked)
     ui->lineEdit_2ndElement->clear();
     ui->label_2ndElement->setVisible(!checked);
     ui->lineEdit_2ndElement->setVisible(!checked);
-    ui->label_1stElement->setText("Число");
+    ui->label_1stElement->setText("Аргумент");
     ui->label_result->setText("Корень");
 }
 
@@ -173,7 +162,7 @@ void Widget::on_radioButton_sin_toggled(bool checked)
     ui->lineEdit_2ndElement->clear();
     ui->label_2ndElement->setVisible(!checked);
     ui->lineEdit_2ndElement->setVisible(!checked);
-    ui->label_1stElement->setText("Число");
+    ui->label_1stElement->setText("Аргумент");
     ui->label_result->setText("sin");
 
 }
@@ -182,7 +171,7 @@ void Widget::on_radioButton_cos_toggled(bool checked){
     ui->lineEdit_2ndElement->clear();
     ui->label_2ndElement->setVisible(!checked);
     ui->lineEdit_2ndElement->setVisible(!checked);
-    ui->label_1stElement->setText("Число");
+    ui->label_1stElement->setText("Аргумент");
     ui->label_result->setText("cos");
 }
 
@@ -190,7 +179,7 @@ void Widget::on_radioButton_arcsin_toggled(bool checked){
     ui->lineEdit_2ndElement->clear();
     ui->label_2ndElement->setVisible(!checked);
     ui->lineEdit_2ndElement->setVisible(!checked);
-    ui->label_1stElement->setText("Число");
+    ui->label_1stElement->setText("Аргумент");
     ui->label_result->setText("arcsin");
 }
 
@@ -198,6 +187,41 @@ void Widget::on_radioButton_arccos_toggled(bool checked){
     ui->lineEdit_2ndElement->clear();
     ui->label_2ndElement->setVisible(!checked);
     ui->lineEdit_2ndElement->setVisible(!checked);
-    ui->label_1stElement->setText("Число");
+    ui->label_1stElement->setText("Аргумент");
     ui->label_result->setText("arccos");
 }
+
+void Widget::on_radioButton_plus_clicked()
+{
+    ui->label_1stElement->setText("Первое слагаемое");
+    ui->label_2ndElement->setText("Второе слагаемое");
+    ui->label_result->setText("Сумма");
+}
+
+
+void Widget::on_radioButton_minus_clicked()
+{
+
+    ui->label_1stElement->setText("Уменьшаемое");
+    ui->label_2ndElement->setText("Вычитаемое");
+    ui->label_result->setText("Разность");
+}
+
+
+void Widget::on_radioButton_multiply_clicked()
+{
+
+    ui->label_1stElement->setText("Первый множитель");
+    ui->label_2ndElement->setText("Второй множитель");
+    ui->label_result->setText("Произведение");
+}
+
+
+void Widget::on_radioButton_divine_clicked()
+{
+
+    ui->label_1stElement->setText("Делимое");
+    ui->label_2ndElement->setText("Делитель");
+    ui->label_result->setText("Частное");
+}
+
