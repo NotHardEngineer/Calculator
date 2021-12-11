@@ -118,13 +118,13 @@ void Widget::on_Button_Result_clicked()
 
                 Result_print(element_1 + element_2);
             }
-            if (ui->radioButton_minus->isChecked()){
+            else if (ui->radioButton_minus->isChecked()){
                 Result_print(element_1 - element_2);
             }
-            if (ui->radioButton_multiply->isChecked()){
+            else if (ui->radioButton_multiply->isChecked()){
                 Result_print(element_1 * element_2);
             }
-            if (ui->radioButton_divine->isChecked()){
+            else if (ui->radioButton_divine->isChecked()){
                 if(element_2 == 0){
                     ui->label_error->setText("Нельзя делить на ноль");
                     ui->lineEdit_2ndElement->setStyleSheet("QLineEdit { background: rgb(255, 0, 0); }");
@@ -133,6 +133,9 @@ void Widget::on_Button_Result_clicked()
                 else{
                     Result_print(element_1/element_2);
                 }
+            }
+            else{
+                ui->label_error->setText("WTF error");
             }
         }
         else {
